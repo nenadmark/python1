@@ -1,0 +1,13 @@
+ime = input("Kako se zoves? ")
+prezime = input("\nTvoje prezime? ")
+god_rod = input("\nGodina rodjenja je? ")
+drzava_rod = input("\nDrzava rodjenja je? ")
+status = input("\nKoji je tvoj radni status? ")
+spol = input("\nKoji je tvoj spol? ")
+
+print("Pozdrav ", ime, "!")
+print("Tvoje prezime je: ", prezime)
+print("Tvoja godina rodjenja je: ", god_rod)
+print("Tvoja drzava rodjenja je: ", drzava_rod)
+print("Tvoj radni status je: ", status)
+print("Tvoj spol je: ", spol)
