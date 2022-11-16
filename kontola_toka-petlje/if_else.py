@@ -1,0 +1,8 @@
+lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper dapibus mollis. In id varius elit. Vivamus laoreet sit amet libero sed ullamcorper. Aliquam vel magna at tortor tincidunt iaculis a et tellus. Suspendisse mattis sagittis facilisis. Nulla ac dui eget risus tristique ullamcorper. Maecenas venenatis gravida augue et lobortis. Etiam imperdiet felis in diam mattis, nec malesuada sapien efficitur. Sed pharetra sagittis ipsum, non vulputate nisi lacinia tempus. Nam posuere blandit quam nec venenatis. Maecenas ut ex ultricies, pharetra felis ac, pharetra urna. Curabitur enim urna, dapibus ut purus ut, egestas facilisis urna. Maecenas efficitur justo et nunc maximus tempor. Ut nibh ex, semper ut placerat ac, molestie vitae sem. Duis euismod dapibus blandit. Sed vulputate mollis risus sit amet mattis. Mauris lorem dui, bibendum id ligula nec, tincidunt maximus nulla. Sed pharetra mauris pretium pharetra luctus. Maecenas elementum blandit felis in venenatis. Suspendisse tincidunt justo sit amet sapien elementum fringilla sit amet nec lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut commodo purus, sit amet semper orci. Praesent viverra, urna eget commodo viverra, nulla velit dapibus odio, nec pretium velit velit id ante. Sed diam sem, gravida auctor malesuada at, lobortis at odio. Vivamus tellus sem, porttitor non justo nec, vulputate mattis purus."
+lorem = lorem.lower()
+lorem = lorem.replace(".", "").replace(",", "").replace("\n", "")
+list_lorem = lorem.split(" ") # split cemo na stringu koristiti kada taj string zelimo rastaviti i spremiti u listu
+
+rijec = input("unesi rijec za koju zelis provjeru: ")
+
+print(f"Rijec {rijec} se u tekstu pojavljuje {list_lorem.count(rijec)} puta")

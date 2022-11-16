@@ -35,6 +35,8 @@ for i in numbers:
 # napisati program koji provjerava pripada li unesena rijec vrsti rijeci palindrom
 #palindrom je rijec koja se jednako pise i cita s lijeva na desno i vice versa
 
+# doraditi program da unosimo rijeci sve dok se ne unese rijec koja je palindrom
+
 word_in = input("PALINDROM - Unesite rijec:")
 word_backwards = word_in [::-1]
 
@@ -43,6 +45,7 @@ if word_in.lower() == word_backwards.lower():
 else:
     print(f"Rijec {word_in} nije Palindrom!")
 print(":"*100)
+
 
 # DRUGI ZADATAK
 ### PRIMJER S PLOCE
@@ -89,3 +92,6 @@ else:
     print("NOT Anagrams!")
 
 print(":"*100)
+
+
+#TRECI ZADATAK - primjer s ploce:
