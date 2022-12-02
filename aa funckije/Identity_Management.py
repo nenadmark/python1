@@ -108,7 +108,7 @@ def main_menu():
     print("4 - (admin) Delete user")
     print("5 - Exit")
     print("*"*50)
-    
+
     key_options = input(": ")
     print("*"*50)
     if key_options == "1" and admin_user:
