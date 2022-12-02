@@ -286,8 +286,7 @@ def display_account_balance():
     print('PyBANK ALGEBRA\n'.center(65), '\n')
     print('PRIKAZ STANJA RACUNA\n'.center(65), '\n')
     print(f'Broj racuna:\t{account_number}')
-    print(f'Naziv računa:\t{company_name}')
-    print(f'OIB računa:\t{company_tax_id}')
+    print(f'Broj racuna:\t{company_name}')
     print(f'Datum i vrijeme:\t{datetime.datetime.today()} {datetime.datetime.now()}\n')
     print(f'Trenutno stanje racuna:\t{account_balance:.2f}{currency}\n\n')
     print('-' * 65)
@@ -298,6 +297,7 @@ def display_account_transactions():
     print('PyBANK ALGEBRA\n'.center(65), '\n')
     print('PRIKAZ PROMETA PO RAČUNU\n'.center(65), '\n')
     print(f'Broj racuna:\t{account_number}')
+    print(f"{transactions}") ##
 
     for i in transactions:
         print(f"ID transakcije: {i}")
