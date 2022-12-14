@@ -91,6 +91,7 @@ except:
     print("Datum je u pogresnom formatu.")
 
 
+#TRY _ EXCEPT _ etc...
 #TRY EXCEPT PRIMJER ZASTO NIJE DOBAR ! (((ALI OVISI O SLUCAJU)))
 # zelimo greske 
 try:
