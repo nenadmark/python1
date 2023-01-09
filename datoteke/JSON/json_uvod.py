@@ -22,5 +22,25 @@ with open("user.json", "w") as file_writer:
     
 """
 
-with open("\datoteke\JSON\user.json", "w") as file_writer:
-    json.dump(korisnik, file_writer)
+
+#with open("\datoteke\JSON\user.json", "w") as file_writer:
+    #json.dump(korisnik, file_writer)
+
+
+
+#baza_korisnika = {}
+# CITANJE JSON DATOTEKE
+# problemi kad se koristi try i except: 
+# 
+try:
+    with open("datoteke\\JSON\\user.json", "r") as json_reader:
+        baza_korisnika = json.load(json_reader)
+except Exception as e:
+    print("greska prilikom otvaranja JSON-a")
+    print(e)
+
+
+
+if baza_korisnika:
+    print(baza_korisnika)
+
