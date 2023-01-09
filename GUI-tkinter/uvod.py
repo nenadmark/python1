@@ -85,4 +85,8 @@ buttonq.pack()"""
 
 
 
+# ovo mozda moze koristiti u seminarskom:
+
+
+
 root.mainloop() # pozivamo tu glavnu petlju
