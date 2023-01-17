@@ -25,7 +25,7 @@ def on_button2_click(event):
 
 text_label = tk.Label(root, text="ovdje ce se prikazivati unesena slova.")
 text_label.grid(row=0, column=0, pady=20)
-
+c
 
 text_label_varijabla = tk.StringVar()
 # ovo je tkinterova varijabla, ona moze mijenjati vrijednost text_label_2
