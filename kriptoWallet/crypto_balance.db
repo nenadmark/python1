@@ -1,0 +1,1 @@
+INSERT INTO base ("name", "amount", "date") VALUES ("Bitcoin", "1", "date");
