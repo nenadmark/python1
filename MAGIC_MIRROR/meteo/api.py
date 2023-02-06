@@ -17,4 +17,6 @@ class Meteo:
         meteo_wind_dir = meteo_data["current_weather"]["winddirection"]
         meteo_weather_code = meteo_data["current_weather"]["weathercode"]
 
+        #print(f"THE DATA IS: {meteo_data}")
+
         return (meteo_temp, meteo_wind_speed, meteo_weather_code, meteo_wind_dir)

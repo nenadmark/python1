@@ -10,7 +10,7 @@ class LiveClock:
         self.dt_label = tk.Label(
             self.parent,
             font=(default_font, 20),
-            text="",
+            text="Zagreb, ",
             bg=color_palette["primary"],
             fg=color_palette["text"]
             )
@@ -19,5 +19,5 @@ class LiveClock:
     
     def update_clock(self):
         current_dt = dt.datetime.now().strftime(date_format)
-        self.dt_label.config(text=current_dt)
+        self.dt_label.config(text=f"Zagreb, {current_dt}")
         self.dt_label.after(1000, self.update_clock)

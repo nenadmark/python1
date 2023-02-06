@@ -2,6 +2,7 @@ import tkinter as tk
 from app_settings import *
 from clock.gui import LiveClock
 from meteo.gui import LiveWeather
+from other_API.gui import CovidTrack
 
 if __name__=="__main__":
 
@@ -13,4 +14,7 @@ if __name__=="__main__":
     live_clock = LiveClock(root)
     #clock_update = LiveClock.update_clock(root)
     meteo = LiveWeather(root)
+
+    covid = CovidTrack(root)
+    
     root.mainloop()
