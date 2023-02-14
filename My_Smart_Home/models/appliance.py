@@ -1,10 +1,12 @@
 import datetime as dt
 from email.policy import default
+from math import degrees
 from typing import Collection
 import sqlalchemy as db
 from models.base import Base
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declared_attr
+from models.room import Room
 
 
 # tu cemo sad stavit jednu klasu, i onda cemo iz te klase nasljedjivati druge s drugim svojstvima
@@ -19,7 +21,7 @@ class ApplianceBase:
     @declared_attr
     def room_id(cls):
         # rooms se odnosi na __tablename__
-        return db.Column(db.Integer, db.ForeignKey('rooms.id'))
+        return db.Column(db.Integer, db.ForeignKey('rooms.id'), nullable=False)
 
     def __repr__(self):
         return self.name
@@ -42,7 +44,7 @@ class TV(ApplianceBase, Base):
 
     # ova strana gdje nam je foreign key, tu ovaj relationship onda mora imati back_populates = ""
     # Room se odnosi na ime klase, a tv_devices se odnosi na naziv atributa u Room klasi
-    room = relationship("Room", back_populates="tv_devices")
+    room = relationship(Room, back_populates="tv_devices")
 
 
 class Refrigerator(ApplianceBase, Base):
@@ -50,14 +52,19 @@ class Refrigerator(ApplianceBase, Base):
 
     temperature = db.Column(db.Float, default=4.0)
 
-    room = relationship("Room", back_populates="refrigerators")
+    room = relationship(Room, back_populates="refrigerators")
+
+class Lights(ApplianceBase, Base):
+    __tablename__="lights"
+    intensity = db.Column(db.Integer, default=6)
+    room = relationship(Room, back_populates="lights")
 
 
 class Speakers(ApplianceBase, Base):
     __tablename__ = "speakers"
 
     volume = db.Column(db.Integer, default=0)
-    playlist_playing = db.Column(db.Integer, default="default_playlist_playing")  
-    eq_settings = db.Column(db.Float, default="flat")
+    playlist_playing = db.Column(db.Integer, default=1)  
+    eq_settings = db.Column(db.String)
 
-    room = relationship("Room", back_populates="speakers")
+    room = relationship(Room, back_populates="speakers")

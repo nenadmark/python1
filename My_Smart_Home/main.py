@@ -4,17 +4,38 @@
 
 import sqlalchemy as db
 from sqlalchemy.orm import sessionmaker
+import tkinter as tk
+from tkinter import ttk
 
 from models.base import Base
-from models.appliance import TV, Refrigerator, Speakers
-from models.room import Room
+from models.appliance import TV, Refrigerator, Speakers, Lights
+from gui.appliances import ApplianceFrame
+from gui.lights import LightsFrame
+from gui.sounds import SoundsFrame
+
 
 
 if __name__ == "__main__":
-    db_engine = db.create_engine("sqlite:///SmartHome.db", echo=True)
+    db_engine = db.create_engine("sqlite:///SmartHome.sqlite", echo=True)
     Base.metadata.create_all(db_engine, checkfirst=True)
 
     Session = sessionmaker(bind=db_engine)
     session = Session()
 
-    print(session.query(Room).first())
+    #print(session.query(Room).first())
+
+    root = tk.Tk()
+    root.title("SmartHome")
+
+    notebook = ttk.Notebook(root)
+    notebook.grid(row=0, column=0)
+
+    appliance_frame = ApplianceFrame(notebook, session)
+    lights_frame = LightsFrame(notebook)
+    sounds_frame = SoundsFrame(notebook)
+
+    notebook.add(appliance_frame.frame, text="Appliances")
+    notebook.add(lights_frame.frame, text="Lights")
+    notebook.add(sounds_frame.frame, text="Sounds")
+
+    root.mainloop()

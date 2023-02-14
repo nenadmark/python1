@@ -3,8 +3,6 @@ import sqlalchemy as db
 from models.base import Base
 from sqlalchemy.orm import relationship
 
-from models.appliance import Refrigerator
-
 class Room(Base):
     __tablename__ = "rooms"
     id = db.Column(db.Integer, primary_key=True)
@@ -15,6 +13,7 @@ class Room(Base):
     # ovo je veza one to many
     tv_devices = relationship("TV")
     refrigerators = relationship("Refrigerator")
+    lights = relationship("Lights")
     speakers = relationship("Speakers")
 
     def __repr__(self):

@@ -1,0 +1,47 @@
+LightDevice klasa:
+
+- klasu koristimo za spremanje i citanje podataka o svjetlosnim uredjajima
+- tablica u bazi koja ce cuvati ove podatke zove se: "lights"
+- klasa ima sljedece atribute:
+    - id - primary key
+    - name 
+    - color
+    - intensity
+    - automatic_activation 
+    - automatic_activation_on 
+    - automatic_activation_off
+
+- klasa nasljedjuje atribute od klase "Base"
+
+- klasa ima relationship odnos s Room objektom, gdje je ForeignKey "rooms.id"
+
+
+Song klasa:
+- klasu koristimo za spremanje i citanje podataka o pjesmama
+- tablica u bazi koja ce cuvati ove podatke zove se: "songs"
+- klasa ima sljedece atribute:
+    - id - primary key
+    - name 
+    - performer
+    - genre
+
+
+- klasa ima atribut play_history koji ima relationship odnos s "SongHistory"
+
+
+
+
+
+SongHistory klasa:
+
+- klasu koristimo za spremanje i citanje podataka o pjesmama
+- tablica u bazi koja ce cuvati ove podatke zove se: "song_history"
+- klasa ima sljedece atribute:
+    - id - primary key
+    - name 
+    - song_id
+    - datetime_played
+
+- klasa ima atribut speaker koji ima relationship odnos s objektom Speaker
+- klasa ima atribut song koji ima relationship odnos s objektom Song, te je povezana s "play_history" tablicom u bazi
+
