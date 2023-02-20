@@ -12,6 +12,7 @@ from models.appliance import TV, Refrigerator, Speakers, Lights
 from gui.appliances import ApplianceFrame
 from gui.lights import LightsFrame
 from gui.sounds import SoundsFrame
+from models.Meteo.meteo import MeteoFrame
 
 
 
@@ -26,6 +27,7 @@ if __name__ == "__main__":
 
     root = tk.Tk()
     root.title("SmartHome")
+    root.geometry("650x450")
 
     notebook = ttk.Notebook(root)
     notebook.grid(row=0, column=0)
@@ -33,9 +35,11 @@ if __name__ == "__main__":
     appliance_frame = ApplianceFrame(notebook, session)
     lights_frame = LightsFrame(notebook)
     sounds_frame = SoundsFrame(notebook)
+    meteo_frame = MeteoFrame(notebook)
 
     notebook.add(appliance_frame.frame, text="Appliances")
     notebook.add(lights_frame.frame, text="Lights")
     notebook.add(sounds_frame.frame, text="Sounds")
+    notebook.add(meteo_frame.frame, text="Weather")
 
     root.mainloop()

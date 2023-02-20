@@ -1,6 +1,4 @@
-from email.policy import default
 import tkinter as tk
-from tkinter import ttk
 
 class SoundsFrame:
     def __init__(self, parent):
@@ -66,7 +64,6 @@ class SoundsFrame:
     def create_playlist_menu_1(self):
         self.change_playlist_menu_1 = tk.OptionMenu(self.frame, self.playlists[0], *self.playlists)
         self.change_playlist_menu_1.grid(row=0, column=4, padx=10, pady=10)
-        self.change_playlist_menu_1.pack()
 
 
     def create_on_button_2(self):
