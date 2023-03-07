@@ -1,20 +1,14 @@
 # ponudi funkcionalnosti smart kuce
-#
-# Baze: 
-
 import sqlalchemy as db
-from sqlalchemy.orm import sessionmaker
 import tkinter as tk
-from tkinter import ttk
-
 from models.base import Base
 from models.appliance import TV, Refrigerator, Speakers, Lights
 from gui.appliances import ApplianceFrame
 from gui.lights import LightsFrame
 from gui.sounds import SoundsFrame
 from models.Meteo.meteo import MeteoFrame
-
-
+from sqlalchemy.orm import sessionmaker
+from tkinter import ttk
 
 if __name__ == "__main__":
     db_engine = db.create_engine("sqlite:///SmartHome.sqlite", echo=True)
