@@ -1,20 +1,43 @@
+import sqlalchemy as db
 import tkinter as tk
-from gui import LoginForm
-import sqlalchemy
+from models.base import Base
+from models.appliance import TV, Refrigerator, Speakers, Lights
+from gui.appliances import ApplianceFrame
+from gui.lights import LightsFrame
+#from gui.sounds import SoundsFrame
+from models.Meteo.meteo import MeteoFrame
+from sqlalchemy.orm import sessionmaker
+from tkinter import ttk
 
-if __name__=="__main__":
-    # ovdje kreiramo root, parenta za tkinter
-    root= tk.Tk()
-    root.title("Login App")
+from gui.login import LoginPage
 
-    login_form = LoginForm(root)
-    # TU INSTANCIRAMO FORMU IZ GUI.PY
-    # login forma prilikom instanciranja prima root windowa iz gui.py
+if __name__ == "__main__":
+    db_engine = db.create_engine("sqlite:///SmartHome.sqlite", echo=True)
+    Base.metadata.create_all(db_engine, checkfirst=True)
 
-    # mainloop zapravo u loopu prikazuje sve na ekran
+    Session = sessionmaker(bind=db_engine)
+    session = Session()
+
+    #print(session.query(Room).first())
+
+    root = tk.Tk()
+    root.title("SmartHome")
+    root.geometry("650x450")
+
+    login_form = LoginPage(root)
+
+    notebook = ttk.Notebook(root)
+    notebook.grid(row=0, column=0)
+
+    
+    appliance_frame = ApplianceFrame(notebook, session)
+    lights_frame = LightsFrame(notebook)
+    #sounds_frame = SoundsFrame(notebook)
+    #meteo_frame = MeteoFrame(notebook)
+
+    notebook.add(appliance_frame.frame, text="Plants- appliances")
+    notebook.add(lights_frame.frame, text="Pots - lights")
+    #notebook.add(sounds_frame.frame, text="Sounds")
+    #notebook.add(meteo_frame.frame, text="Weather")
+    
     root.mainloop()
-
-# ako smo pokrenuli skriptu u pythonu, onda python stavlja __name__ kao da je __main__
-# ovaj print u ifu ce se pokrenuti samo ako pokrenemo main kao skripu
-# POKRECEMO MAIN.PY 
-# elemente GUI-a dodajemo u gui.py

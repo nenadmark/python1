@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker # session objekt radi upite prema nasoj bazi
 # sessionmaker kreira sesion koji ce raditi upite prema bazi
 
-from models.base import Base, User
+from models.models import Base, User
 
 engine = create_engine("sqlite:///loginapp.db", echo=True) # baza ce nam se zvati loginapp.db
 #echo , kad god sqlalchemy izvrsava neku naredbu prema bazi, echo ce nam u terminalu vracati logove 
@@ -50,3 +50,7 @@ def delete_user(id):
     if user:
         session.delete(user)
         session.commit()
+
+
+## pyplant dio za komunikaciju s bazama
+
