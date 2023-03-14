@@ -1,0 +1,29 @@
+ID,Name,Description,Manufacturer,Price,Quantity
+1,iPhone 13,"The latest iPhone",Apple,999.99,10
+2,Samsung Galaxy S21,"A popular Android smartphone",Samsung,799.99,20
+3,iPad Air,"Powerful tablet with an A14 Bionic chip",Apple,599.99,15
+4,Google Pixel 6,"A top-performing Android phone",Google,899.99,5
+5,MacBook Air,"Thin and light laptop with Retina display",Apple,999.99,8
+6,Dell XPS 13,"Premium laptop with 11th Gen Intel Core processors",Dell,1299.99,12
+7,Sony Playstation 5,"The latest gaming console from Sony",Sony,499.99,4
+8,Xbox Series X,"Microsoft's latest gaming console",Microsoft,499.99,3
+9,Amazon Echo Dot,"Smart speaker with Alexa voice control",Amazon,49.99,50
+10,Fitbit Charge 5,"Advanced health and fitness tracker",Fitbit,179.99,25
+11,GoPro Hero 10 Black,"4K action camera with advanced stabilization",GoPro,499.99,7
+12,Canon EOS R5,"Full-frame mirrorless camera with 8K video",Canon,3899.99,3
+13,Sony Alpha 7 III,"Full-frame mirrorless camera with 24.2MP sensor",Sony,1999.99,6
+14,Bose QuietComfort 35 II,"Wireless noise-cancelling headphones",Bose,299.99,18
+15,Apple AirPods Pro,"Wireless earbuds with active noise cancellation",Apple,249.99,30
+16,Samsung QN90A,"65-inch 4K QLED TV with impressive brightness",Samsung,2199.99,2
+17,LG OLED C1,"55-inch OLED TV with stunning picture quality",LG,1799.99,4
+18,Sonos Arc,"Premium smart soundbar for TV, movies, music, and more",Sonos,799.99,5
+19,Nintendo Switch,"Hybrid gaming console for home and on-the-go play",Nintendo,299.99,10
+20,Microsoft Surface Laptop 4,"Slim and stylish laptop with touchscreen display",Microsoft,1299.99,6
+21,HP Spectre x360,"2-in-1 laptop with OLED display and long battery life",HP,1299.99,7
+22,Lenovo Yoga 9i,"Premium 2-in-1 laptop with leather cover and stylus",Lenovo,1499.99,4
+23,Apple Watch Series 7,"Advanced smartwatch with larger display and faster charging",Apple,399.99,20
+24,Samsung Galaxy Watch 4,"Sleek smartwatch with fitness tracking and ECG",Samsung,249.99,15
+25,Fitbit Versa 3,"Smartwatch with built-in GPS and voice assistant",Fitbit,229.99,10
+26,Anker PowerCore III Elite,"High-capacity portable charger with 60W USB-C output",Anker,129.99,30
+27,RavPower PD Pioneer 20000mAh,"Compact portable charger with 60W USB-C output",RavPower,79.99,40
+28,Apple MagSafe Charger,"Wireless charging pad for iPhone 12 and newer models",Apple,39.99

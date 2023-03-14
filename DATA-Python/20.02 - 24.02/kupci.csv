@@ -1,0 +1,11 @@
+OIB,Ime,Prezime,Drzava,Grad,Postanski broj,Ulica,Kucni broj,Dodatak,Datum rodenja,Premium
+12345678910,Pero,Peric,Hrvatska,Zagreb,10000,Ilica,1,,01.01.1990 12:00:00,DA
+10987654321,John,Doe,Hrvatska,Osijek,31000,Zagrebacka,10A,"1. kat, 2. ulaz",05.05.1985 00:00:00,NE
+12345109876,Jane,Doe,Slovenija,Ljubljana,1000,Mariborska,7,,10.10.1987 00:00:00,DA
+10987612345,George,Peric,USA,New York,10001,Park Avenue,5C,,15.01.1980 00:00:00,NE
+54398721910,Anne,Doe,Engleska,London,SW1W 0NY,King's Road,5A,,12.12.1995 00:00:00,NE
+12345678910,Pero,Peric,Hrvatska,Zagreb,10000,Ilica,1,,01.01.1990 12:00:00,DA
+10987654321,John,Doe,Hrvatska,Osijek,31000,Zagrebacka,10A,"1. kat, 2. ulaz",05.05.1985 00:00:00,NE
+12345109876,Jane,Doe,Slovenija,Ljubljana,1000,Mariborska,7,,10.10.1987 00:00:00,DA
+10987612345,George,Peric,USA,New York,10001,Park Avenue,5C,,15.01.1980 00:00:00,NE
+54398721910,Anne,Doe,Engleska,London,SW1W 0NY,King's Road,5A,,12.12.1995 00:00:00,NE
