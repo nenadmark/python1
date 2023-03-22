@@ -9,6 +9,7 @@ from models.crud_login import login_user, get_all_users, delete_user
 class LoginForm:
     def __init__(self, root):
         self.root = root
+        #self.root.config(bg="skyblue")
 
         self.email_label = tk.Label(self.root, text="Email:", font=("Arial", 15))
         self.email_label.grid(row=0, column=0, padx=10, pady=10)

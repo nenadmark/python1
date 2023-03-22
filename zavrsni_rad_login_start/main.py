@@ -44,10 +44,11 @@ class Login(tk.Toplevel):
                 print("OK LOGIN")
                 self.withdraw()
                 self.root.deiconify()
-            else:
                 messagebox.showinfo("Success.", f"Welcome {user.name}")
+            else:
+                messagebox.showinfo("Error.", f"Wrong email or password")
         else:
-            messagebox.showerror("Fail.", f"Wrong email or password")
+            messagebox.showerror("Error.", f"Wrong email or password")
 
         #self.withdraw()
         #self.root.deiconify()
@@ -57,7 +58,8 @@ def main():
     root.withdraw()
     root.resizable(False, False)
     root.configure(height=500, width=500)
-    root.geometry("500x500")
+    root.geometry("900x600")
+    #root.config(bg="skyblue")
 
     root.title("PyPlant")
 

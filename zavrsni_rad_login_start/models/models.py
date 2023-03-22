@@ -25,7 +25,7 @@ class Plants(Base):
 
     id = db.Column(db.Integer, primary_key=True) # koji tip podataka ce biti u stupcu
     name = db.Column(db.String, nullable=False)
-    #photo
+    photo_path = db.Column(db.String)
 
     def __repr__(self) -> str:
         return self.name
