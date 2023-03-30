@@ -7,6 +7,7 @@ import sqlalchemy as db
 #from gui.login import LoginForm
 from gui.plants import PlantsFrame
 from gui.pots import PotsFrame
+from gui.meteo import MeteoFrame
 
 from models.models import Base
 from models.crud_login import login_user
@@ -20,9 +21,12 @@ class Login(tk.Toplevel):
         super().__init__(root)
 
         self.root = root
+        self.config(bg="slategray2")
 
-        username_label = tk.Label(self, text="Username:")
-        password_label = tk.Label(self, text="Password:")
+        username_label = tk.Label(self, text="Username:", font= ('Helvetica 15 underline'))
+        username_label.config(bg="slategray2")
+        password_label = tk.Label(self, text="Password:", font= ('Helvetica 15 underline'))
+        password_label.config(bg="slategray2")
         self.email_entry = tk.Entry(self)
         self.password_entry = tk.Entry(self)
         submit = tk.Button(self, text="Login", command=self.login)
@@ -59,10 +63,10 @@ def main():
     root.withdraw()
     root.resizable(False, False)
     root.configure(height=500, width=500)
-    root.geometry("700x1075")
+    root.geometry("550x995")
     root.resizable(False, True)
-    
-    #root.config(bg="skyblue")
+
+    #root.config(bg="slategray2")
 
     root.title("PyPlant")
 
@@ -80,39 +84,11 @@ def main():
 
     plants_frame = PlantsFrame(notebook, session)
     pots_frame = PotsFrame(notebook, session)
+    meteo_frame = MeteoFrame(notebook)
 
     notebook.add(plants_frame.frame, text="Plants")
     notebook.add(pots_frame.frame, text="Pots")
-
-
-
-
-
-    """
-    my_canvas1 = tk.Canvas(notebook)
-    my_canvas1.grid(sticky="E", row=0, column=0)
-
-    my_scrollbar1 = ttk.Scrollbar(notebook, orient=tk.VERTICAL, command=my_canvas1.yview)
-    my_scrollbar1.grid(sticky="E", row=0, column=0)
-    my_scrollbar1.config(command=my_canvas1.yview)
-    my_canvas1.config(yscrollcommand=my_scrollbar1.set)
-
-
-    my_scrollbar2 = ttk.Scrollbar(notebook, orient=tk.VERTICAL, command=my_canvas1.yview)
-    my_scrollbar2.grid(sticky="E", row=0, column=0)
-    """
-
-
-
-
-    #my_canvas2 = tk.Canvas(root)
-    #my_canvas2.grid(sticky="E", row=0, column=0)
-
-    #my_scrollbar2 = ttk.Scrollbar(notebook, orient=tk.VERTICAL, command=my_canvas1.yview)
-    #my_scrollbar2.grid(sticky="E", row=0, column=0)
-    #my_scrollbar2.config(command=my_canvas1.yview)
-    #my_canvas1.config(yscrollcommand=my_scrollbar2.set)
-
+    notebook.add(meteo_frame.frame, text="Weather")
 
     root.mainloop()
 
