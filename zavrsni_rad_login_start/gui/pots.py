@@ -56,17 +56,12 @@ class PotsFrame:
             self.pot_frame.grid(row=i, column=0, padx=10, pady=1, ipadx=60, ipady=1)
             self.pot_frame.config(bg="palegreen1")
 
-
-
-
-            # Create a label to display the plant image
             image = tk.PhotoImage(file=pot['image_path'])
             image.configure(width=120, height=120)
             label_image = tk.Label(self.pot_frame, image=image, font=self.font)
             label_image.image = image
             label_image.grid(row=i, column=0, padx=7, pady=7)
         
-            # Create labels to display the plant name, humidity, and temperature
             label_name = tk.Label(self.pot_frame, text=pot['id'], font=self.font)
             label_name.grid(row=i, column=1, padx=10)
             label_name.config(bg="palegreen1")

@@ -47,7 +47,6 @@ class PlantsFrame:
         'image_path': 'assets\\thumbs\plants\White_Wizard_130x130.png'
     }]
 
-
     def create_plants_frame(self):
         for i, plant in enumerate(self.plant_data):
 
@@ -57,15 +56,12 @@ class PlantsFrame:
             self.plant_frame.grid(row=i, column=0, padx=10, pady=1, ipadx=60, ipady=1)
             self.plant_frame.config(bg="skyblue2")
 
-
-            # Create a label to display the plant image
             image = tk.PhotoImage(file=plant['image_path'])
             image.configure(width=120, height=120)
             label_image = tk.Label(self.plant_frame, image=image, font=self.font)
             label_image.image = image
             label_image.grid(row=i, column=0, padx=7, pady=7)
         
-            # Create labels to display the plant name, humidity, and temperature
             label_name = tk.Label(self.plant_frame, text=plant['name'], font=self.font)
             label_name.grid(row=i, column=1, padx=10)
             label_name.config(bg="skyblue2")

@@ -15,11 +15,6 @@ class User(Base):
     def __repr__(self) -> str:
         return self.name
 
-
-
-
-
-
 class Plants(Base):
     __tablename__= "plants"  # naziv tablice u samoj bazi podataka
 
@@ -29,8 +24,6 @@ class Plants(Base):
 
     def __repr__(self) -> str:
         return self.name
-    
-
 
 class Pots(Base):
     __tablename__= "pots"  

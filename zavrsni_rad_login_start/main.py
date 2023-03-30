@@ -1,20 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-from tkinter import Scrollbar
 import sqlalchemy as db
-
-#from gui.login import LoginForm
 from gui.plants import PlantsFrame
 from gui.pots import PotsFrame
 from gui.meteo import MeteoFrame
-
 from models.models import Base
 from models.crud_login import login_user
-
 from sqlalchemy.orm import sessionmaker
-
-
 
 class Login(tk.Toplevel):
     def __init__(self, root):
@@ -38,14 +31,12 @@ class Login(tk.Toplevel):
         submit.grid(row=2, column=1, sticky="e", padx=10, pady=10)
 
     def login(self):
-        # if username and password are valid:
         email_login = self.email_entry.get()
         password_login = self.password_entry.get()
         user = login_user(email_login, password_login)
 
         if user:
             if user.is_admin:
-                #users_list = UsersList(self.root)
                 print("OK LOGIN")
                 self.withdraw()
                 self.root.deiconify()
@@ -55,9 +46,6 @@ class Login(tk.Toplevel):
         else:
             messagebox.showerror("Error.", f"Wrong email or password")
 
-        #self.withdraw()
-        #self.root.deiconify()
-
 def main():
     root = tk.Tk()
     root.withdraw()
@@ -65,9 +53,6 @@ def main():
     root.configure(height=500, width=500)
     root.geometry("550x995")
     root.resizable(False, True)
-
-    #root.config(bg="slategray2")
-
     root.title("PyPlant")
 
     db_engine = db.create_engine("sqlite:///plants_pots.sqlite", echo=True)
