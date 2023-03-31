@@ -51,7 +51,7 @@ def main():
     root.withdraw()
     root.resizable(False, False)
     root.configure(height=500, width=500)
-    root.geometry("550x995")
+    root.geometry("575x995")
     root.resizable(False, True)
     root.title("PyPlant")
 

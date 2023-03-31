@@ -20,17 +20,24 @@ class Plants(Base):
 
     id = db.Column(db.Integer, primary_key=True) # koji tip podataka ce biti u stupcu
     name = db.Column(db.String, nullable=False)
-    photo_path = db.Column(db.String)
+    sort = db.Column(db.String, nullable=False)
+    humidity = db.Column(db.Integer, nullable=False)
+    temperature = db.Column(db.Integer, nullable=False)
+    p_code = db.Column(db.String, nullable=False)
+    image_path = db.Column(db.String)
 
     def __repr__(self) -> str:
         return self.name
+    
 
 class Pots(Base):
     __tablename__= "pots"  
 
     id = db.Column(db.Integer, primary_key=True) 
     name = db.Column(db.String, nullable=False)
-    plant_inside = db.Column(db.String)
+    radius = db.Column(db.Integer, nullable=False)
+    p_code = db.Column(db.String, nullable=False)
+    image_path = db.Column(db.String)
 
     def __repr__(self) -> str:
         return self.name
