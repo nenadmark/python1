@@ -16,9 +16,9 @@ class User(Base):
         return self.name
 
 class Plants(Base):
-    __tablename__= "plants"  # naziv tablice u samoj bazi podataka
+    __tablename__= "plants"
 
-    id = db.Column(db.Integer, primary_key=True) # koji tip podataka ce biti u stupcu
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     sort = db.Column(db.String, nullable=False)
     humidity = db.Column(db.Integer, nullable=False)
@@ -29,7 +29,6 @@ class Plants(Base):
     def __repr__(self) -> str:
         return self.name
     
-
 class Pots(Base):
     __tablename__= "pots"  
 
