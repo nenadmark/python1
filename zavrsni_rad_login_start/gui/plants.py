@@ -1,5 +1,6 @@
 import tkinter as tk
-from models.models import Plants
+#from models.models_1 import Plants
+
 class PlantsFrame:
     def __init__(self, parent, session):
         self.session = session
@@ -66,15 +67,15 @@ class PlantsFrame:
     }]
 
     def create_plants_frame(self):
-        plants = self.session.query(Plants).all()
+        #plants = self.session.query(Plants).all()
 
-        print(plants)
+        #print(Plants)
 
 
         for i, plant in enumerate(self.plant_data):
             self.plant_frame = tk.LabelFrame(
                 self.frame, text=f'{plant["id"]} - {plant["name"]}', width=450, height=140,
-                font=self.font)
+                font=self.font, bd=4)
             self.plant_frame.grid(row=i, column=0, padx=5, pady=1, ipadx=60, ipady=1, sticky="w")
             self.plant_frame.config(bg="skyblue2")
 

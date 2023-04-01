@@ -58,7 +58,7 @@ class PotsFrame:
 
             self.pot_frame = tk.LabelFrame(
                 self.frame, text=f'{pot["id"]} - {pot["name"]}', width=450, height=140,
-                font=self.font)
+                font=self.font, bd=4)
             self.pot_frame.grid(row=i, column=0, padx=5, pady=1, ipadx=60, ipady=1, sticky="w")
             self.pot_frame.config(bg="palegreen1")
 

@@ -5,7 +5,7 @@ from tkinter import messagebox
 from gui.plants import PlantsFrame
 from gui.pots import PotsFrame
 from gui.meteo import MeteoFrame
-from models.models import Base
+from models.models_1 import Base
 from models.crud_login import login_user
 from sqlalchemy.orm import sessionmaker
 

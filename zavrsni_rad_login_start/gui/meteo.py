@@ -2,6 +2,10 @@ import requests
 import xmltodict
 import tkinter as tk
 
+from models.models_1 import Plants
+
+print(Plants)
+
 response = requests.get("https://vrijeme.hr/hrvatska_n.xml")
 response_dict = xmltodict.parse(response.content)
 
@@ -33,7 +37,7 @@ class MeteoFrame:
     def create_indoor_frame(self):
         self.indoor_frame = tk.LabelFrame(
             self.frame, text="Indoor values", width=400, height=400,
-            font=self.font_header, bd=4
+            font=self.font_header, bd=6
         )
         self.indoor_frame.grid(row=0, column=0, ipadx=20, ipady=20, padx=70, pady=30)
         self.indoor_frame.config(bg="burlywood1")
@@ -43,7 +47,7 @@ class MeteoFrame:
     def create_outdoor_frame(self):
         self.outdoor_frame = tk.LabelFrame(
             self.frame, text="Outdoor values", width=400, height=400,
-            font=self.font_header
+            font=self.font_header, bd=6
         )
         self.outdoor_frame.grid(row=1, column=0, ipadx=20, ipady=20, padx=70, pady=30)
         self.outdoor_frame.config(bg="burlywood1")
@@ -53,7 +57,7 @@ class MeteoFrame:
     def create_wind_info_frame(self):
         self.wind_info_frame = tk.LabelFrame(
             self.frame, text="Wind status and more info", width=400, height=400,
-            font=self.font_header
+            font=self.font_header, bd=6
         )
         self.wind_info_frame.grid(row=2, column=0, ipadx=20, ipady=20, padx=70, pady=30)
         self.wind_info_frame.config(bg="burlywood1")

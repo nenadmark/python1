@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models.models import Base, User
+from models.models_1 import Base, User
 
 engine = create_engine("sqlite:///loginapp.db", echo=True)
 

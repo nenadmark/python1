@@ -1,6 +1,6 @@
 -- SQLite
 
-INSERT INTO users ("name", "email", "password", "is_admin") VALUES ("admin", "ad", "12", true);
+INSERT INTO users ("id", name", "email", "is_admin", "password") VALUES (1,"admin", "ad", true, "12");
 
 
 
