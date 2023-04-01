@@ -33,7 +33,7 @@ class MeteoFrame:
     def create_indoor_frame(self):
         self.indoor_frame = tk.LabelFrame(
             self.frame, text="Indoor values", width=400, height=400,
-            font=self.font_header
+            font=self.font_header, bd=4
         )
         self.indoor_frame.grid(row=0, column=0, ipadx=20, ipady=20, padx=70, pady=30)
         self.indoor_frame.config(bg="burlywood1")
