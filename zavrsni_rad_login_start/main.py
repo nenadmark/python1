@@ -7,7 +7,7 @@ from gui.pots import PotsFrame
 from gui.meteo import MeteoFrame
 from models.models_1 import Base
 from models.crud_login import login_user
-from sqlalchemy.orm import sessionmaker
+
 
 class Login(tk.Toplevel):
     def __init__(self, root):
@@ -55,11 +55,7 @@ def main():
     root.resizable(False, True)
     root.title("PyPlant")
 
-    db_engine = db.create_engine("sqlite:///plants_pots.sqlite", echo=True)
-    Base.metadata.create_all(db_engine, checkfirst=True)
 
-    Session = sessionmaker(bind=db_engine)
-    session = Session()
 
     login_window =  Login(root)
 
@@ -67,8 +63,8 @@ def main():
     notebook.configure(width=700)
     notebook.grid(row=0, column=0)
 
-    plants_frame = PlantsFrame(notebook, session)
-    pots_frame = PotsFrame(notebook, session)
+    plants_frame = PlantsFrame(notebook)
+    pots_frame = PotsFrame(notebook)
     meteo_frame = MeteoFrame(notebook)
 
     notebook.add(plants_frame.frame, text="Plants")
